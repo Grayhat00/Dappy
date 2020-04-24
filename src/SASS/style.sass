@@ -1,0 +1,131 @@
+$font-stack: Montserrat, sans-serif
+$blue: #315EFB
+$green: linear-gradient(324.5deg, #28BC00 -27.5%, rgba(40, 188, 0, 0) 108.52%)
+$dark: #1F2431
+$grey: #82899B
+$white: #fffff
+
+*, *:before, *:after, h1
+  box-sizing: border-box
+  margin: 0
+
+body
+  font: $font-stack
+  h2
+    font-style: normal
+    font-weight: bold
+    font-size: 24px
+    line-height: 29px
+    color: $dark
+
+  a
+    text-decoration: none
+    cursor: pointer
+  p
+    font-style: normal
+    font-weight: 300
+    font-size: 16px
+    line-height: 29px
+    color: $grey
+
+  .btn
+    background: $blue
+    border-radius: 51px
+    font-weight: 500
+    font-size: 12px
+    line-height: 17px
+    text-align: center
+    text-transform: uppercase
+    border: 0
+    outline: none
+
+.header
+  max-width: 69.3rem
+  margin-top: 2.4rem
+  margin-left: auto
+  margin-right: auto
+  display: grid
+  grid-template-columns: 1.5fr 5fr 2fr
+  grid-template-rows: 3.6rem
+  align-items: center
+
+  .site-logo
+    grid-column: 1/2
+  .nav
+    grid-column: 2/2
+    &__link
+      margin-right: 2.1rem
+      font-weight: normal
+      font-size: 16px
+      line-height: 20px
+      color: $dark
+
+      &:last-child(last)
+        margin-right: 0
+
+  .social-icons
+    grid-column: 4/5
+    display: grid
+    grid-template-columns: repeat(6, 1fr)
+    justify-items: end
+  .fab
+    padding: 5px 5px
+    background: $dark
+    border-radius: 50%
+
+.body
+  max-width: 69.3rem
+  display: grid
+  margin-top: 3.6rem
+  margin-bottom: 7.9rem
+  margin-right: auto
+  margin-left: auto
+  grid-template-columns: 1fr 1fr
+
+  &__info
+    grid-column: 1/2
+    padding-left: 3rem
+    align-self: center
+  &__title
+    font-weight: bold
+    font-size: 36px
+    line-height: 46px
+
+  &__subtitle
+    margin-top: 1.3rem
+    margin-bottom: 1.5rem
+    font-weight: 300
+    font-size: 16px
+    line-height: 26px
+    color: #82899B
+  .btn--long
+    width: 13.4rem
+    height: 2.5rem
+    color: $white
+  &__figures
+    grid-column: 2/3
+    padding-right: 3rem
+
+  .logo-1
+    padding-bottom: .3rem
+
+.social-icons__link
+  color: $white
+.about
+  max-width: 69.3rem
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  margin-right: auto
+  margin-left: auto
+
+  &__description
+    grid-column: 1/2
+    max-width: 25.3rem
+  &__text
+    //padding: 2.25rem
+  &__photo
+    grid-column: 2/3
+  &__title
+    margin-bottom: 4.3rem
+
+
