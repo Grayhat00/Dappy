@@ -7,10 +7,15 @@ $white: #fff
 $bg-color: #FAFCFF
 $violet: linear-gradient(324.53deg, #315EFB -27.5%, rgba(49, 94, 251, 0) 108.52%)
 $lt-gray: linear-gradient(273.54deg, #DADAFF -2.84%, rgba(238, 238, 255, 0) 122.55%)
+$border-blue: #315EFB
 *, *:before, *:after, h1
   box-sizing: border-box
   margin: 0
-
+.fab
+  padding: 5px 5px
+  background: $dark
+  border-radius: 50%
+  color: $white
 body
   font: $font-stack
 
@@ -41,9 +46,7 @@ body
   .btn
     color: $white
     background: $blue
-    border-radius: 51px
-    font-weight: 500
-    font-size: 12px
+
     line-height: 17px
     text-align: center
     text-transform: uppercase
@@ -96,8 +99,6 @@ body
   margin-bottom: 5.75rem
   grid-template-columns: 1fr 1fr
   grid-column-gap: 1rem
-  //grid-row-gap: 5.75rem
-
   &__info
     grid-column: 1/2
     padding-left: 3rem
@@ -117,6 +118,9 @@ body
   .btn--long
     width: 13.4rem
     height: 2.5rem
+    border-radius: 51px
+    font-weight: 500
+    font-size: 12px
   &__figures
     grid-column: 2/3
     padding-right: 3rem
@@ -130,7 +134,7 @@ body
 
 .main
   grid-template-columns: repeat(2, 1fr)
-  grid-template-rows: repeat(4, minmax(13.7rem, auto))
+  grid-template-rows: repeat(5, minmax(13.7rem, auto))
   grid-gap: .6rem
 
 .card
@@ -177,7 +181,7 @@ body
     grid-row: 4/5
     max-width: 25rem
   &__image
-    width: 85%
+    width: 80%
 
 .tokens
   grid-column: 2/3
@@ -191,24 +195,28 @@ body
   &__footer
     grid-column: 2/3
     grid-row: 4/5
+    max-width: 23.6rem
+  &__image
+    max-width: 80%
 
 
 .roadmap
   grid-column: 1/2
-  grid-row: 4/5
+  grid-row: 4/6
   display: grid
-  grid-template-columns: repeat(3, 1fr)
-  grid-template-rows: repeat(6, 1fr)
+  grid-template-columns:  repeat(3, 1fr)
+  grid-template-rows: repeat(6, 1fr) 10rem
   background: $bg-color
   grid-row-gap: 2.1rem
-
   &__header
     grid-column: 1/4
     grid-row: 1/2
   .item
     display: grid
     grid-template-columns: min-content 1fr
-    grid-template-rows: 1fr
+    grid-template-rows: auto
+    margin-left: 2.5rem
+    margin-right: 2.5rem
   &__circle
     width: 20px
     height: 20px
@@ -248,13 +256,11 @@ body
 
 .exchange
   grid-column: 2/3
-  grid-row: 4/5
-  //align-self: end
+  grid-row: 5/6
   background: $bg-color
   display: grid
   grid-template-columns: 2.5rem auto 2.5rem
   grid-template-rows: 2rem repeat(3, auto) 2rem
-
 
   &__header
     grid-column: 2/3
@@ -262,7 +268,67 @@ body
   &__text
     grid-column: 2/3
     grid-row: 3/4
+    max-width: 26rem
+    margin-top: 1.25rem
+    margin-bottom: 2.3rem
   &__footer
     grid-column: 2/3
     grid-row: 4/5
+    align-self: end
+  &__image
+    width: 80%
 
+.footer
+  display: grid
+  margin-left: auto
+  margin-right: auto
+  max-width: 69.3rem
+  grid-template-columns: 2.5rem repeat(3, 1fr)
+  grid-template-rows: repeat(2, auto auto 7.3rem)
+  &__about
+    grid-column: 2/3
+    grid-row: 1/2
+  &__contact
+    grid-column: 3/4
+    grid-row: 1/2
+  &__newsletter
+    grid-column: 5/6
+    grid-row: 1/2
+  &__title
+    font-weight: bold
+    font-size: 16px
+    line-height: 20px
+    color: $dark
+    margin-bottom: 1.25rem
+  &__nav-list
+    list-style: none
+    margin: 0
+    padding: 0
+  &__nav-item
+  &__nav-link
+    color: $grey
+    font-size: 16px
+    line-height: 20px
+    padding-top: .6rem
+  &__subtitle
+    font-weight: normal
+    font-size: 16px
+    line-height: 20px
+    color: $grey
+    margin-bottom: 1.8rem
+  &__search-box
+    position: relative
+  &__search-field
+    width: 13.6rem
+    height: 2.5rem
+    border-radius: 6px
+    border: 1px solid #82899B
+    padding-left: 14px
+  &__btn
+    position: absolute
+    width: 6.6rem
+    height: 2.5rem
+    border-radius: 0px 6px 6px 0px
+    font-weight: normal
+    font-size: 14px
+    right: 14px
